@@ -6,4 +6,8 @@ defmodule LiveplaceWeb.PageController do
     # so skip the default app layout.
     render(conn, :home)
   end
+
+  def game(conn, _params) do
+    render(conn, :dashboard)
+  end
 end
