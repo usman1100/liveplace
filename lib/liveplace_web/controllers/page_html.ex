@@ -6,5 +6,11 @@ defmodule LiveplaceWeb.PageHTML do
   """
   use LiveplaceWeb, :html
 
+  def test(assigns) do
+    ~H"""
+    <h1 class="text-6xl">Test</h1>
+    """
+  end
+
   embed_templates "page_html/*"
 end

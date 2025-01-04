@@ -19,6 +19,7 @@ defmodule LiveplaceWeb.Router do
 
     get "/", PageController, :home
     get "/game", PageController, :game
+    get "/test", PageController, :test
   end
 
   # Other scopes may use custom stacks.

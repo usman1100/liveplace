@@ -10,4 +10,8 @@ defmodule LiveplaceWeb.PageController do
   def game(conn, _params) do
     render(conn, :game)
   end
+
+  def test(conn, _params) do
+    render(conn, :test)
+  end
 end
