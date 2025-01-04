@@ -8,6 +8,6 @@ defmodule LiveplaceWeb.PageController do
   end
 
   def game(conn, _params) do
-    render(conn, :dashboard)
+    render(conn, :game)
   end
 end
