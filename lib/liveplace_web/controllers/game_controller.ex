@@ -11,4 +11,8 @@ defmodule LiveplaceWeb.GameController do
     render(conn, :show, gameid: gameid)
   end
 
+  def redirect_to_game(conn, _params) do
+    redirect(conn, to: ~p"/game")
+  end
+
 end

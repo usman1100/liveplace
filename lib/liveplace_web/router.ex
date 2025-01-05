@@ -24,6 +24,7 @@ defmodule LiveplaceWeb.Router do
     pipe_through :browser
 
     get "/", GameController, :index
+    get "/45", GameController, :redirect_to_game
     get "/:gameid", GameController, :show
   end
 
