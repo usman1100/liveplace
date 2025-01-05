@@ -18,8 +18,13 @@ defmodule LiveplaceWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
-    get "/game", GameController, :index
-    get "/game/:gameid", GameController, :show
+  end
+
+  scope "/game", LiveplaceWeb do
+    pipe_through :browser
+
+    get "/", GameController, :index
+    get "/:gameid", GameController, :show
   end
 
   # Other scopes may use custom stacks.
