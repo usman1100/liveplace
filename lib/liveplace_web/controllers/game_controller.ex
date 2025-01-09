@@ -12,7 +12,9 @@ defmodule LiveplaceWeb.GameController do
   end
 
   def redirect_to_game(conn, _params) do
-    redirect(conn, to: ~p"/game")
+    conn
+    |> put_flash(:error, "Forbidden game")
+    |> redirect(to: ~p"/game")
   end
 
 end
