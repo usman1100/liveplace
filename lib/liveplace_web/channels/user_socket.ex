@@ -1,6 +1,6 @@
 defmodule LiveplaceWeb.UserSocket do
   use Phoenix.Socket
-  channel "room:*", LiveplaceWeb.RoomChannel
+  channel "game:*", LiveplaceWeb.GameChannel
 
   @impl true
   def connect(_params, socket, _connect_info) do

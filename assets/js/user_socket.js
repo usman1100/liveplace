@@ -4,7 +4,7 @@ let socket = new Socket("/user-socket", { params: { token: window.userToken } })
 
 socket.connect();
 
-let channel = socket.channel("room:lobby", {});
+let channel = socket.channel("game:common", {});
 channel
   .join()
   .receive("ok", (resp) => {
