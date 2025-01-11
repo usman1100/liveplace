@@ -28,6 +28,13 @@ defmodule LiveplaceWeb.Router do
     get "/:gameid", GameController, :show
   end
 
+  scope "/users", LiveplaceWeb do
+    pipe_through :browser
+
+    get "/", UserController, :index
+    get "/:id", UserController, :show
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", LiveplaceWeb do
   #   pipe_through :api
