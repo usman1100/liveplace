@@ -7,14 +7,9 @@ defmodule LiveplaceWeb.GameChannel do
   end
 
   @impl true
-  def handle_in("ping", payload, socket) do
-    {:reply, {:ok, payload}, socket}
-  end
-
-  @impl true
-  def handle_in("shout", payload, socket) do
-    broadcast(socket, "shout", payload)
-    {:noreply, socket}
-  end
+ def handle_in("message", %{"body" => body}, socket) do
+   broadcast!(socket, "message", %{"body" => body})
+   {:noreply, socket}
+ end
 
 end
