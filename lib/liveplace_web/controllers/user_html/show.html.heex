@@ -3,6 +3,6 @@
     {@user.name}
   </h1>
 
-  <a class="underline text-sky-500" href={"mailto:#{@user.email}"}>Email: {@user.email}</a>
+  <p>Email: <a class="underline text-sky-500" href={"mailto:#{@user.email}"}>{@user.email}</a></p>
   <p :if={@user.age}>Age: <b>{@user.age}</b></p>
 </div>
