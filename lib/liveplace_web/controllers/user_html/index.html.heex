@@ -1,5 +1,7 @@
 <h1 class="text-6xl">Users</h1>
 
-<ul>
-  <li :for={user <- @users}>{user.name}</li>
+<ul class="list-decimal list-inside mt-10">
+  <li :for={user <- @users} class="mb-2">
+    <a href={~p"/users/#{user.id}"} class="text-blue-500 hover:underline">{user.name}</a>
+  </li>
 </ul>
